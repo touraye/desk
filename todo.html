@@ -11,13 +11,18 @@
 			http-equiv="X-Content-Security-Policy"
 			content="default-src 'self'; script-src 'self'"
 		/>
-		<title>Hello World!</title>
+		<title>Add New Todo</title>
 	</head>
 	<body>
-		<h1>Hello World!</h1>
-		We are using Node.js <span id="node-version"></span>, Chromium
-		<span id="chrome-version"></span>, and Electron
-		<span id="electron-version"></span>.
-		<script src="./renderer.js"></script>
+		<form>
+			<div>
+				<label for="todo">Enter your todo</label>
+			</div>
+			<div>
+				<input type="text" autofocus />
+			</div>
+
+			<button type="submit">Save</button>
+		</form>
 	</body>
 </html>
