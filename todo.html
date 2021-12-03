@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8" />
-		<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-		<meta
-			http-equiv="Content-Security-Policy"
-			content="default-src 'self'; script-src 'self'"
-		/>
-		<meta
-			http-equiv="X-Content-Security-Policy"
-			content="default-src 'self'; script-src 'self'"
-		/>
+		<link rel="stylesheet" href="styles/todo.css" />
 		<title>Add New Todo</title>
 	</head>
 	<body>
-		<form>
-			<div>
-				<label for="todo">Enter your todo</label>
-			</div>
-			<div>
-				<input type="text" autofocus />
+		<form id="form">
+			<div class="form-control">
+				<label class="form-label" for="todo">Enter your todo</label>
+				<input class="form-input" type="text" id="inputValue" autofocus />
 			</div>
 
-			<button type="submit">Save</button>
+			<div class="form-control date-row">
+				<label class="form-label" for="todo">Choose Date</label>
+				<input class="form__date-picker" type="datetime-local" id="dateValue" />
+			</div>
+
+			<div class="form-control complete">
+				<label for="completed">Completed</label>
+				<input class="form-check" type="checkbox" id="checkValue" />
+			</div>
+
+			<div class="form-control">
+				<button class="form-submit" type="submit">Save</button>
+			</div>
 		</form>
+
+		<script>
+			const form = document.querySelector('form')
+
+			form.addEventListener('submit', (e) => {
+				e.preventDefault()
+
+				console.log('item')
+			})
+		</script>
 	</body>
 </html>

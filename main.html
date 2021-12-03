@@ -1,19 +1,88 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8" />
-		<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-		<meta
-			http-equiv="Content-Security-Policy"
-			content="default-src 'self'; script-src 'self'"
-		/>
-		<meta
-			http-equiv="X-Content-Security-Policy"
-			content="default-src 'self'; script-src 'self'"
-		/>
+		<link rel="stylesheet" href="styles/main.css" />
 		<title>Electron App</title>
 	</head>
 	<body>
-		<h1>My Todo's</h1>
+		<header>
+			<div class="logo">
+				<h1 class="logo__text">Coder</h1>
+			</div>
+		</header>
+		<main>
+			<div>
+				<h1 class="heading">My Todo's</h1>
+
+				<ul class="todo__list">
+					<li class="todo__item">
+						<div class="todo__info-container">
+							<h3 class="todo__name">Sunday meetup</h3>
+							<div class="todo__date-row">
+								<p>Dec 6, 2021</p>
+							</div>
+						</div>
+						<div class="todo__action-container">
+							<img src="./image/edit.svg" alt="edit-todo" class="edit__todo" />
+							<img
+								src="./image/delete.svg"
+								alt="delete-todo"
+								class="delete__todo"
+							/>
+						</div>
+					</li>
+					<li class="todo__item">
+						<div class="todo__info-container">
+							<h3 class="todo__name">Social media marketing</h3>
+							<div class="todo__date-row">
+								<p>Dec 6, 2021</p>
+							</div>
+						</div>
+						<div class="todo__action-container">
+							<img src="./image/edit.svg" alt="edit-todo" class="edit__todo" />
+							<img
+								src="./image/delete.svg"
+								alt="delete-todo"
+								class="delete__todo"
+							/>
+						</div>
+					</li>
+					<li class="todo__item">
+						<div class="todo__info-container">
+							<h3 class="todo__name">Teaching at MDI</h3>
+							<div class="todo__date-row">
+								<p>Dec 16, 2021</p>
+								<p>Dec 17, 2021</p>
+							</div>
+						</div>
+						<div class="todo__action-container">
+							<img src="./image/edit.svg" alt="edit-todo" class="edit__todo" />
+							<img
+								src="./image/delete.svg"
+								alt="delete-todo"
+								class="delete__todo"
+							/>
+						</div>
+					</li>
+					<li class="todo__item">
+						<div class="todo__info-container">
+							<h3 class="todo__name done">Build Electron APP</h3>
+							<div class="todo__date-row">
+								<p>Dec 01, 2021</p>
+							</div>
+						</div>
+						<div class="todo__action-container">
+							<img src="./image/edit.svg" alt="edit-todo" class="edit__todo" />
+							<img
+								src="./image/delete.svg"
+								alt="delete-todo"
+								class="delete__todo"
+							/>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</main>
+		<footer>Copyright &copy; <span id="date">2021</span></footer>
 	</body>
 </html>
